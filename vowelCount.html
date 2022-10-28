@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Return the Number of Vowels in a String in JavaScript</h1>
+
+    <script>
+        function getVowelCount(string){
+            var vowelscount = 0;
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            for(let char of string){
+                if(vowels.includes(char)){
+                    vowelscount++;
+                }
+            }
+            return vowelscount;
+        }
+        console.log(getVowelCount('my name is sazzad'));
+    </script>
+</body>
+</html>
