@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Multiplication Table Up to a Range</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function printMultiplicationTable() {
+            var number = document.getElementById("number").value;
+            var range = document.getElementById("range").value;
+            var result = document.getElementById("result");
+            result.innerHTML = '';
+            // loop 
+            for (i = 1; i <= range; i++) {
+                // mulitply i with number
+                const multiplication = i * number;
+
+                // display the result
+                table = (`${number} * ${i} = ${multiplication} <br>`);
+                result.innerHTML += table;
+            }
+        }
+    </script>
+</head>
+
+<body class="container">
+    <h1>Multiplication Table Up to a Range</h1>
+    Number: <input type="number" id="number">
+    Range: <input type="number" id="range">
+    <input type="button" onclick="printMultiplicationTable()" value="Print the table">
+    <br> <br>
+    <div id="result"></div>
+</body>
+
+</html>

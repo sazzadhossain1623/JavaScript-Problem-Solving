@@ -4,31 +4,43 @@
     <title>Print Even Numbers</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        function printEvenNums(){
+        function printEvenNums() {
             var start = parseInt(document.getElementById("start").value);
             var end = parseInt(document.getElementById("end").value);
             var evenNums = "<br>Even Numbers are:</br>"
 
             // Loop
-            for(i=start; i<=end; i++){
-                if(i % 2 == 0){
+            for (i = start; i <= end; i++) {
+                if (i % 2 == 0) {
                     evenNums += i + "<br>";
                 }
             }
             // Print the values
             document.getElementById("result").innerHTML = evenNums;
         }
+
+        const number = parseInt(prompt('Enter an integer: '));
+
+        //creating a multiplication table
+        for (let i = 1; i <= 10; i++) {
+
+            // multiply i with number
+            const result = i * number;
+
+            // display the result
+            console.log(`${number} * ${i} = ${result}`);
+        }
     </script>
-    
+
 </head>
 
 <body>
     <h2>JavaScript to Print Even Numbers Within a Range!!</h2>
-    
+
     Start: <input type="number" min="0" id="start" value="1" />
     End: <input type="number" min="1" id="end" value="20" />
 
-    <input type="button" onclick="printEvenNums()" value="Print Even Numbers"/>
+    <input type="button" onclick="printEvenNums()" value="Print Even Numbers" />
 
     <div id="result"></div>
 </body>

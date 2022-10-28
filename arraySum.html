@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 100px;
+        }
+
+        input,
+        span {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>How to Get the Sum of an Array in JavaScript</h2>
+
+    <script>
+        // for loop
+        /* function sumOfArray(array) {
+            let sum = 0;
+            for (i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        }
+        const numArray = [1, 2, 3, 4, 5];
+        console.log(sumOfArray(numArray)); */
+
+        // forEach
+        /* function sumOfArray(array) {
+            let sum = 0;
+            array.forEach(element => {
+                sum += element;
+            });
+            console.log(sum);
+            return sum;
+        }
+
+        const numArray = [1, 2, 3, 4, 5];
+        sumOfArray(numArray); */
+
+        // Using for...of
+        function sumOfArray(array){
+            let sum = 0;
+            for(const item of array){
+                sum += item;
+            }
+            console.log(sum);
+            return sum;
+        }
+
+        const numArray = [1, 2, 3, 4, 5];
+        sumOfArray(numArray);
+
+    </script>
+</body>
+
+</html>

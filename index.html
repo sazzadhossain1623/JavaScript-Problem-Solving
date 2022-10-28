@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Print Even Numbers</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function printMultiplicationTable(){
+            var multiplication_number = document.getElementById("multiplication_table").value;
+            var result = document.getElementById("result");
+            result.innerHTML = '';
+
+            for(i=1; i <=10; i++){
+                // multiply i with number
+                const multiplication = i * multiplication_number;
+
+                // display the result
+                table = (`${multiplication_number} * ${i} = ${multiplication} <br>`);
+                result.innerHTML += table;
+            }
+        }
+    </script>
+</head>
+
+<body class="container">
+    <h2>How to Generate the Multiplication Table <br> of a Number in JavaScript</h2>
+    Multiplication tabel of 
+    <input type="number" id="multiplication_table">
+    <input type="button" onclick="printMultiplicationTable()" value="Print the Table">
+    <div id="result"></div>
+</body>
+
+</html>
